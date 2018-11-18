@@ -13,20 +13,20 @@ ExecuteScript([
 ], {**globals()})
 
 project.Files([
-	"customentities/**",
-	("customentities/sdk_hack/**", "sdk_hack"),
-	("customentities/sdk_hack/NextBot/**", "sdk_hack/NextBot"),
-	("customentities/CustomEntities/**", "CustomEntities"),
-	("customentities/entities/**", "entities"),
+	"src/**",
+	("src/sdk_hack/**", "sdk_hack"),
+	("src/sdk_hack/NextBot/**", "sdk_hack/NextBot"),
+	("src/CustomEntities/**", "CustomEntities"),
+	("src/entities/**", "entities"),
 
-	([	"customentities/smsdk_config.h",
+	([	"src/smsdk_config.h",
 		os.path.join(args.smpath, "public/smsdk_ext.cpp"),
 		os.path.join(args.smpath, "public/smsdk_ext.h"),
 	], "smsdk"),
 ])
 
 project.Includes([
-	"customentities/**",
+	"src/**",
 	"thirdparty",
 
 	os.path.join(args.smpath, "sourcepawn/include"),
@@ -54,7 +54,7 @@ project.LinkerOption("IgnoreSpecificDefaultLibraries", ["libcmt"])
 
 project.CompilerOption("PreprocessorDefinitions", ["PLATFORM_WINDOWS","SERVER_DLL","GAME_DLL","NEXT_BOT","NEXTBOT"])
 
-pch = os.path.join(solution.root, "customentities/pch.h")
+pch = os.path.join(solution.root, "src/pch.h")
 project.CompilerOption("PrecompiledHeader", "Use")
 project.CompilerOption("PrecompiledHeaderFile", pch)
 project.CompilerOption("ForcedIncludeFiles", pch)
