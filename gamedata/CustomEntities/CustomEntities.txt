@@ -1,0 +1,49 @@
+"Games"
+{
+	"#default"
+	{
+		"Offsets"
+		{
+			"UTIL_RemoveEntity"
+			{
+				"windows" "6" //IServerTools::RemoveEntity + 0x6
+			}
+			"UTIL_RemoveNetwork"
+			{
+				"windows" "14" //UTIL_Remove(CBaseEntity *) + 0xE
+			}
+			"CSimpleBot::CSimpleBot"
+			{
+				"windows" "23" //CEntityFactory<CSimpleBot>::Create + 0x17
+			}
+			"CPhysicsCannister::CPhysicsCannister"
+			{
+				"windows" "23" //CEntityFactory<CPhysicsCannister>::Create + 0x17
+			}
+			"NextBotCombatCharacter::NextBotCombatCharacter"
+			{
+				"windows" "4" //CSimpleBot::CSimpleBot + 0x4
+			}
+			"CBaseCombatCharacter::CBaseCombatCharacter"
+			{
+				"windows" "3" //CPhysicsCannister::CPhysicsCannister + 0x3
+			}
+			"CBaseEntity::PostConstructor"
+			{
+				"windows" "26"
+			}
+			"sizeof(NextBotCombatCharacter)"
+			{
+				"windows" "2200"
+			}
+			"sizeof(CBaseCombatCharacter)"
+			{
+				"windows" "2200"
+			}
+			"TheNavMesh"
+			{
+				"windows" "22" //nav_test_stairs + 0x16
+			}
+		}
+	}
+}

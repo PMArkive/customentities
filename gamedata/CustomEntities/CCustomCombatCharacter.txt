@@ -1,0 +1,67 @@
+"Games"
+{
+	"#default"
+	{
+		"Offsets"
+		{
+			"OnTakeDamage_Alive"
+			{
+				"windows" "272"
+			}
+			"OnTakeDamage_Dying"
+			{
+				"windows" "273"
+			}
+			"IsAreaTraversable"
+			{
+				"windows" "313"
+			}
+			"BecomeRagdoll"
+			{
+				"windows" "291"
+			}
+			/*
+			"OnNavAreaChanged"
+			{
+				"windows" ""
+			}
+			*/
+			"UpdateLastKnownArea"
+			{
+				"windows" "315"
+			}
+		}
+	}
+	"tf"
+	{
+		"Offsets"
+		{
+			"OnTakeDamage_Alive"
+			{
+				"windows" "275"
+			}
+			"OnTakeDamage_Dying"
+			{
+				"windows" "276"
+			}
+			"IsAreaTraversable"
+			{
+				"windows" "316"
+			}
+			"BecomeRagdoll"
+			{
+				"windows" "294"
+			}
+			/*
+			"OnNavAreaChanged"
+			{
+				"windows" ""
+			}
+			*/
+			"UpdateLastKnownArea"
+			{
+				"windows" "318"
+			}
+		}
+	}
+}

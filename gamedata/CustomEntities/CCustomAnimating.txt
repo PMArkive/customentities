@@ -1,0 +1,66 @@
+"Games"
+{
+	"cstrike"
+	{
+		"Signatures"
+		{
+			"LockStudioHdr"
+			{
+				"library" "server"
+				"windows" "\x55\x8B\xEC\x83\xEC\x20\x57\x6A\x01"
+			}
+		}
+	}
+	"#default"
+	{
+		"Offsets"
+		{
+			"HandleAnimEvent"
+			{
+				"windows" "203"
+			}
+			"DispatchAnimEvents"
+			{
+				"windows" "202"
+			}
+			"StudioFrameAdvance"
+			{
+				"windows" "190"
+			}
+			"Ignite"
+			{
+				"windows" "209"
+			}
+		}
+	}
+	"tf"
+	{
+		"Signatures"
+		{
+			"LockStudioHdr"
+			{
+				"library" "server"
+				"windows" "\x55\x8B\xEC\x51\x53\x8B\xD9\x56\x57\x8D\xB3\x54\x04\x00\x00"
+			}
+		}
+		"Offsets"
+		{
+			"HandleAnimEvent"
+			{
+				"windows" "206"
+			}
+			"DispatchAnimEvents"
+			{
+				"windows" "205"
+			}
+			"StudioFrameAdvance"
+			{
+				"windows" "193"
+			}
+			"Ignite"
+			{
+				"windows" "212"
+			}
+		}
+	}
+}

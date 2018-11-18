@@ -1,0 +1,111 @@
+"Games"
+{
+	"cstrike"
+	{
+		"Signatures"
+		{
+			"SetNextThink"
+			{
+				"library" "server"
+				"windows" "\x55\x8B\xEC\xF3\x0F\x10\x45\x08\x0F\x2E\x05\x2A\x2A\x2A\x2A\x53"
+			}
+		}
+	}
+	"tf"
+	{
+		"Signatures"
+		{
+			"SetNextThink"
+			{
+				"library" "server"
+				"windows" "\x55\x8B\xEC\xF3\x0F\x10\x45\x08\x83\xEC\x10"
+			}
+		}
+	}
+	"#default"
+	{
+		"Offsets"
+		{
+			"Spawn"
+			{
+				"windows" "22"
+			}
+			"Precache"
+			{
+				"windows" "23"
+			}
+			"SetModel"
+			{
+				"windows" "24"
+			}
+			"Think"
+			{
+				"windows" "47"
+			}
+			"IsNPC"
+			{
+				"windows" "70"
+			}
+			"MyNextBotPointer"
+			{
+				"windows" "72"
+			}
+			"MyCombatCharacterPointer"
+			{
+				"windows" "71"
+			}
+			"Classify"
+			{
+				"windows" "53"
+			}
+			"EyePosition"
+			{
+				"windows" "130"
+			}
+			/*
+			"MyNPCPointer"
+			{
+				"windows" ""
+			}
+			*/
+			"Event_Killed"
+			{
+				"windows" "66"
+			}
+			"PerformCustomPhysics"
+			{
+				"windows" "169"
+			}
+			"PhysicsSolidMaskForEntity"
+			{
+				"windows" "167"
+			}
+			"Touch"
+			{
+				"windows" "99"
+			}
+			"AcceptInput"
+			{
+				"windows" "36"
+			}
+			"KeyValue_1"
+			{
+				"windows" "31"
+			}
+			"KeyValue_2"
+			{
+				"windows" "30"
+			}
+			/*
+			"KeyValue_3"
+			{
+				"windows" ""
+			}
+			*/
+			"KeyValue_4"
+			{
+				"windows" "29"
+			}
+		}
+	}
+}

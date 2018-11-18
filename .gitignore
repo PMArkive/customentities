@@ -1,0 +1,9 @@
+*.sln
+.vs/
+build/
+obj/
+vcxproj/
+__pycache__/
+.git/
+thirdparty/
+!thirdparty/thirdparty.bat
