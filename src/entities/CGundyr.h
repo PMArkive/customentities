@@ -27,6 +27,8 @@ class CGundyr final : public CCustomNextBotCombatCharacter
 	private:
 		CBaseNextBotBody *_body{nullptr};
 		CBaseNextBotLocomotion *_locomotion{nullptr};
+
+
 };
 
 #endif

@@ -8,17 +8,20 @@ CBaseNextBotLocomotion::CBaseNextBotLocomotion(CCustomNextBotCombatCharacter *co
 
 float CBaseNextBotLocomotion::GetMaxJumpHeight() const
 {
-	return 0.0f;
+	return 180.0f;
 }
 
 float CBaseNextBotLocomotion::GetDeathDropHeight() const
 {
-	return 0.0f;
+	return 200.0f;
 }
 
 float CBaseNextBotLocomotion::GetRunSpeed() const
 {
-	return m_pCustomBot->m_flGroundSpeed;
+	float speed{m_pCustomBot->m_flGroundSpeed};
+	if(speed <= 0.0f)
+		speed = 150.0f;
+	return speed;
 }
 
 float CBaseNextBotLocomotion::GetWalkSpeed() const
