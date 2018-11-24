@@ -111,9 +111,9 @@ inline void CArgsBuilder::SetReturn() noexcept
 		ctor = MemUtils::any_cast<const void *>(&CtorThunkHelper<Type>::NormalCtor);
 	if constexpr(std::is_trivially_copy_constructible_v<Type>)
 		cctor = MemUtils::any_cast<const void *>(&CtorThunkHelper<Type>::CopyCtor);
-	if constexpr(std::is_assignable_v<Type>)
+	if constexpr(std::is_assignable_v<Type, Type>)
 		ator = MemUtils::any_cast<const void *>(&CtorThunkHelper<Type>::AssignOp);
-	if constexpr(std::is_destructible_v<Type, Type>)
+	if constexpr(std::is_destructible_v<Type>)
 		dtor = MemUtils::any_cast<const void *>(&CtorThunkHelper<Type>::Dtor);
 
 	size_t size{0};
@@ -140,9 +140,9 @@ inline void CArgsBuilder::AddParam() noexcept
 		ctor = MemUtils::any_cast<const void *>(&CtorThunkHelper<Type>::NormalCtor);
 	if constexpr(std::is_trivially_copy_constructible_v<Type>)
 		cctor = MemUtils::any_cast<const void *>(&CtorThunkHelper<Type>::CopyCtor);
-	if constexpr(std::is_assignable_v<Type>)
+	if constexpr(std::is_assignable_v<Type, Type>)
 		ator = MemUtils::any_cast<const void *>(&CtorThunkHelper<Type>::AssignOp);
-	if constexpr(std::is_destructible_v<Type, Type>)
+	if constexpr(std::is_destructible_v<Type>)
 		dtor = MemUtils::any_cast<const void *>(&CtorThunkHelper<Type>::Dtor);
 
 	size_t size{0};

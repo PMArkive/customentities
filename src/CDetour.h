@@ -32,7 +32,7 @@ DISABLE_ASMJIT_WARNINGS();
 #pragma warning(pop)
 #pragma pop_macro("new")
 
-#define DETOUR_MEMBER_CALL(...) (this->*Actual)(__VA_ARGS__)
+#define DETOUR_MEMBER_CALL(name, ...) (reinterpret_cast<name *const>(this)->*name::Actual)(__VA_ARGS__)
 #define DETOUR_STATIC_CALL(name, ...) (name##Actual)(__VA_ARGS__)
 
 #define DETOUR_DECL_MEMBER(ret, name, ...) \
@@ -49,6 +49,9 @@ DISABLE_ASMJIT_WARNINGS();
 
 #define DETOUR_STATIC(name, addr) \
 	Detour(MemUtils::any_cast<const void **>(&name##Actual), nullptr, MemUtils::any_cast<const void *>(name), MemUtils::any_cast<const void *>(addr));
+
+#define DETOUR_MEMBER(name, addr) \
+	Detour(MemUtils::any_cast<const void **>(&name::Actual), nullptr, MemUtils::any_cast<const void *>(&name::Detour), MemUtils::any_cast<const void *>(addr));
 
 #define DETOUR_CREATE_STATIC(name, addr) \
 	static const CDetour _##name##Detour{MemUtils::any_cast<const void **>(&name##Actual), nullptr, MemUtils::any_cast<const void *>(name), MemUtils::any_cast<const void *>(addr)};

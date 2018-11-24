@@ -42,7 +42,7 @@ namespace MemUtils
 			if(*addr == 0x60 || *addr == 0x40) {
 				*addr++;
 				return (*addr / sizeof(const void *const));
-			} else if(*addr == 0xA0) {
+			} else if(*addr == 0xA0 || *addr == 0x80) {
 				addr++;
 				return (*(reinterpret_cast<const unsigned int *const>(addr)) / sizeof(const void *const));
 			} else if(*addr == 0x20 || *addr == 0x0)

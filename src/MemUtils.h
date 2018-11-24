@@ -88,6 +88,8 @@ namespace MemUtils
 	extern const void *const GetVFunc(const void *const ptr, const int index) noexcept;
 	extern const int GetVFuncIndex(const void *const func) noexcept;
 
+	#define acast MemUtils::any_cast
+
 	#pragma warning(push)
 	#pragma warning(disable: 4172)
 	template <typename D, typename S>
@@ -100,6 +102,14 @@ namespace MemUtils
 		return _dst;
 	}
 	#pragma warning(pop)
+
+	template <typename T>
+	inline const void *const GetVFunc(const void *const ptr, const T func) noexcept
+	{
+		const void *const addr{MemUtils::any_cast<const void *>(func)};
+		const int index{GetVFuncIndex(addr)};
+		return GetVFunc(ptr, index);
+	}
 
 	template <typename T>
 	inline void SetPtrVarAtOffset(void *const ptr, const int offset, const T &value) noexcept
@@ -125,5 +135,7 @@ namespace MemUtils
 		**reinterpret_cast<T *const *const>(reinterpret_cast<unsigned char *const>(ptr) + offset + 2) = value;
 	}
 };
+
+using namespace MemUtils;
 
 #endif
