@@ -7,6 +7,8 @@ project.LinkerOption("GenerateDebugInformation", "DebugFull", "Release|*")
 project.CompilerOption("DebugInformationFormat", "ProgramDatabase", "Release|*")
 project.CompilerOption("OmitFramePointers", "false", "Release|*")
 
+project.CompilerOption("PreprocessorDefinitions", ["concept=_concept","module=_module"])
+
 ExecuteScript([
 	os.path.join(solution.root, "projects/detours_inc.py"),
 	os.path.join(solution.root, "projects/asmjit_inc.py"),
@@ -93,6 +95,9 @@ project.CompilerOption("DisableSpecificWarnings", [
 	"4263","4264","4266","4099","5033",
 	"4555","4464","5038","4062","4838",
 	"4456","4457","4150","4612","4373",
+	"4121","4820","4514","4710","4625",
+	"4623","5027","5045","4626","4100",
+	"5026","4774",
 ])
 
 project.CompilerOption("PreprocessorDefinitions", ["_CRT_SECURE_NO_WARNINGS","DBGFLAG_H","RAD_TELEMETRY_DISABLED"])

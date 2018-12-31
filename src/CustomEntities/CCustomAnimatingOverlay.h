@@ -17,7 +17,7 @@ class CCustomAnimatingOverlay : public CCustomAnimating
 
 		CUtlVector<CAnimationLayer> *const GetAnimOverlay() const noexcept;
 
-		constexpr CBaseAnimatingOverlay *const GetBaseAnimatingOverlay() const noexcept
+		CBaseAnimatingOverlay *const GetBaseAnimatingOverlay() const noexcept
 			{ return reinterpret_cast<CBaseAnimatingOverlay *const>(GetBaseAnimating()); }
 
 		const int AddGestureSequence(const int sequence, const bool autokill=true) noexcept;

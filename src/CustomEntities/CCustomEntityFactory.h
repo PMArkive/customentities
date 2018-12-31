@@ -84,7 +84,7 @@ class CEntityFactoryDictionary final : public IEntityFactoryDictionary
 		CUtlDict<IEntityFactory *, unsigned short> m_Factories;
 };
 
-inline constexpr CEntityFactoryDictionary *const __EntityFactoryDictionary() noexcept
+inline CEntityFactoryDictionary *const __EntityFactoryDictionary() noexcept
 { return reinterpret_cast<CEntityFactoryDictionary *const>(entityfactory); }
 
 #define LINK_CUSTOM_ENTITY_TO_CLASS(real, fake, name) \

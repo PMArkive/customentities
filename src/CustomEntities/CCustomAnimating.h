@@ -62,7 +62,7 @@ class CCustomAnimating : public CCustomBaseEntity
 		void LockStudioHdr() noexcept;
 		CStudioHdr *const GetModelPtr() const noexcept;
 
-		constexpr CBaseAnimating *const GetBaseAnimating() const noexcept
+		CBaseAnimating *const GetBaseAnimating() const noexcept
 			{ return reinterpret_cast<CBaseAnimating *const>(entity()); }
 
 	protected:
